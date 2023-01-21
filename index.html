@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e318fea92b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Simulador de prestamos</title>
+</head>
+<body>
+    <main>
+        <form action="" class="form-prestamo" id="form-prestamo">
+            <!-- Grupo nombre -->
+            <div class="form-grupo-nombre" id="form-grupo-nombre">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <div class="form-grupo-input">
+                    <input type="text" class="form-input" name="nombre" id="nombre" placeholder="Ingrese su nombre aqui">
+                    <i class="form-validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="form-input-error">El nombre no puede contener numeros y/o caracteres especiales</p>
+            </div>
+            <!-- Grupo edad -->
+            <div class="form-grupo-edad" id="form-grupo-edad">
+                <label for="edad" class="form-label">Edad</label>
+                <div class="form-grupo-input">
+                    <input type="text" class="form-input" name="edad" id="edad" placeholder="Ingrese su edad aqui">
+                    <i class="form-validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="form-input-error">Edad no permitida para realizar prestamos</p>
+            </div>
+            <!-- Grupo capital -->
+            <div class="form-grupo-capital" id="form-grupo-capital">
+                <label for="capital" class="form-label">Capital</label>
+                <div class="form-grupo-input">
+                    <input type="text" class="form-input" name="capital" id="capital" placeholder="Ingrese su edad aqui">
+                    <i class="form-validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="form-input-error">No se puede hacer un prestamo para ese monto de capital</p>
+            </div>
+            <!-- Grupo cuotas -->
+            <div class="form-grupo-cuotas" id="form-grupo-cuotas">
+                <label for="cuotas" class="form-label">Cuotas</label>
+                <div class="form-grupo-input">
+                    <input type="text" class="form-input" name="cuotas" id="cuotas" placeholder="Ingrese su edad aqui">
+                    <i class="form-validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="form-input-error">No se puede realizar un prestamo en esa cantidad de cuotas</p>
+            </div>
+            <div class="form-grupo form-grupo-btn-enviar">
+                <input type="submit" class="form-btn">
+            </div>
+        </form>
+        <div class="informacion-prestamo" id="informacion-prestamo"></div>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

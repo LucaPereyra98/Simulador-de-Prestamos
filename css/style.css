@@ -1,0 +1,156 @@
+/* Reset */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos pagina */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #e5e5e5;
+}
+
+body main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.form-prestamo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form-grupo-input {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.form-input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0 30px;
+}
+
+.form-input-error {
+    font-size: 16px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form-input-error-activo {
+    display: block;
+}
+
+.form-validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.form-antiguedad, .form-deudas {
+    margin-right: 10px;
+}
+
+.form-antiguedad, .form-deudas, .form-mensaje, .form-grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+.form-grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.form-btn:hover {
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
+}
+
+.form-resultado {
+    font-size: 14px;
+    color: #000;
+    display: block;
+}
+
+
+/* Estilos para validacion de datos */
+
+.form-grupo-correcto .form-validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+} 
+
+.form-grupo-incorrecto .form-label {
+    color: #bb2929;
+}
+
+.form-grupo-incorrecto .form-validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.form-grupo-incorrecto .form-input {
+    border: 3px solid #bb2929;
+}
+
+/* Estilo de la tabla */
+
+.tabla-prestamos td tr{
+    width: 100%;
+}
+
+.tabla-prestamos td {
+    border: 1px solid black
+}
+
+/* Mediaquerys */
+
+@media screen and (max-width: 800px) {
+    .form-prestamo {
+        grid-template-columns: 1fr;
+    }
+    .form-antiguedad, .form-deudas, .form-mensaje, .form-grupo-btn-enviar {
+        grid-column: span 1;
+    }
+    .form-btn {
+        width: 100%;
+    }
+}
